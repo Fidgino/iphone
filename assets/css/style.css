@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* Variable */
+
 * {
     position: relative;
     overflow: hidden;
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: 'Roboto', sans-serif;
 }
 body {
     background-color: #161b21;
@@ -20,8 +24,10 @@ body {
     border: 10px solid #000000;
     background-image: url(../images/fondEcran0.jpg);
     background-size: cover;
+    -webkit-box-shadow: 10px 10px 15px 5px #000000; 
+    box-shadow: 10px 10px 15px 5px #000000;
 }
-.MainIphone {
+.mainIphone {
     background-image: url(../images/fondEcran0.jpg);
     background-size: cover;
     width: 350px;
@@ -50,7 +56,6 @@ body {
 }
 #containerWhiteBar {
     width: 350px;
-    height: 29.06px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,9 +72,11 @@ body {
 @keyframes slidein {
     from {
         transform: translate(0, 0);
+        opacity: 1;
     }
     to {
         transform: translate(0, -1000px);
+        opacity: 0;
     }
 }
 
@@ -83,7 +90,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'roboto', sans-serif;
     color: white;
 }
 #containerLockedScreen :nth-child(1) {
@@ -102,7 +108,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'roboto', sans-serif;
     font-weight: bold;
 }
 #containerIconLockedScreenRight {
@@ -114,20 +119,13 @@ body {
 
 #containerMenuScreen {
     height: 500px;
-    width: 350px;
+    width: 320px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
     justify-items: center;
-    margin-bottom: 40px;
-}
-.app {
-    width: 56px;
-    height: 56px;
-    background-color: violet;
-    border-radius: 15px;
-    cursor: pointer;
+    margin-left: 15px;
 }
 #containerFooterApplication {
     width: 350px;
@@ -138,12 +136,54 @@ body {
     align-items: center;
 }
 #containerChildFooterApplication {
-    width: 320px;
+    width: 330px;
     height: 80px;
     background-color: #cfe2e9a3;
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 24px;
+}
+#containerMainSeachMenu {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#containerSearchMenu {
+    width: 120px;
+    height: 30px;
+    background-color: #cfe2e9a3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerSearchMenu :nth-child(2) {
+    margin-left: 5px;
+}
+
+
+/* App Paramètre */
+
+.containerApp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.app {
+    width: 56px;
+    height: 56px;
+    background-color: violet;
+    border-radius: 15px;
+}
+.app1 {
+    background-image: url(../images/reglageIcon.png);
+    background-size: cover;
 }
